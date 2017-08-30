@@ -1,0 +1,37 @@
+.search {
+  width: 90%;
+  margin: 10px auto;
+  position: relative;
+
+  @include mq(medium) {
+    padding: 10px 20px 10px 0;
+    border-bottom: 1px solid palette(grey,xx-light);
+    border-left: 1px solid palette(grey,xx-light);
+    width: 80%;
+    margin:0 -10.5px 20px 0;
+  }
+
+  input {
+    height: 40px;
+    border-radius: 5px;
+    width: calc(100% - 10px);
+    border: none;
+    padding: 5px 5px;
+    font-size: em(22px);
+    font-weight: $font-weight--light;
+    color:palette(black,light);
+    letter-spacing: 1.5px;
+
+    @include mq(medium) {
+      width:60%;
+      height: 30px;
+      float: right;
+    }
+
+    &:focus {
+      outline: none;
+      transition:all 0.5s;
+      border-bottom: 2px solid $steel-blue;
+    }
+  }
+}

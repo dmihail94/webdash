@@ -1,0 +1,33 @@
+h1.logo {
+  @extend %headl-primary;
+  color: $white;
+  margin-bottom: 2px;
+  margin-left: auto;
+
+  @include mq(medium) {
+    order: 1;
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+
+h2.name-profile {
+  @extend %headl-secondary;
+  display: none;
+  color: $white;
+
+  @include mq(medium) {
+    display: block;
+    order: 4;
+    border-left:2px solid $white;
+    margin-left: 15px;
+    padding-left: 15px;
+  }
+}
+
+h2.title-chart {
+  @extend %headl-secondary;
+  font-size: em(30px);
+  text-align: center;
+  margin: 20px 0;
+}

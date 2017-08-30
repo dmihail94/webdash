@@ -1,0 +1,34 @@
+main {
+  max-width: calc(100% - 180px);
+  padding: 0 10px;
+  width: 90%;
+  transition: all 0.5s;
+  @include mq(medium) {
+    width: 100%;
+
+  }
+
+  .header {
+    width: 100%;
+    @include flexy($dir:column,$just:center);
+    @include mq(medium) {
+      @include flexy($dir:row);
+    }
+
+    h2 {
+      @extend %headl-secondary;
+      font-size: em(30px);
+      text-align: center;
+      margin: 20px auto;
+    }
+  }
+}
+
+.main-show {
+  @include mq(small) {
+    max-width: 100%;
+    width: 100%;
+    transform: translateX(0);
+    transition: all 0.5s;
+  }
+}

@@ -1,0 +1,35 @@
+@mixin flexy($disp: flex, $wrap: null, $just: null, $dir: null) {
+  display: flex;
+  flex-wrap: $wrap;
+  justify-content: $just;
+  flex-direction: $dir;
+}
+
+@mixin e($element) {
+  &-#{$element} {
+    @content;
+  }
+}
+
+//Media queris
+
+@mixin mq($break) {
+  @if $break == 'small' {
+    @media (min-width: $break-sm) and (max-width: $break-md) {
+      @content;
+    }
+  }
+  @else if $break == 'medium' {
+    @media (min-width: $break-md + 1) {
+      @content;
+    }
+  }
+  @else if $break == 'large' {
+    @media (min-width:$break-lg) {
+      @content;
+    }
+  }
+  @else {
+    @error 'No values could be retrieved';
+  }
+}

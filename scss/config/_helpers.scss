@@ -1,0 +1,11 @@
+//Change color dash SVG
+
+.active {
+  border-left: 4px solid $brick;
+  @include mq(large) {
+    background: $white;
+    .st0 {
+      fill:$black;
+    }
+  }
+}

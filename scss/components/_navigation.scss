@@ -1,0 +1,43 @@
+
+.nav {
+  background: $dark-blue;
+  width: 60px;
+  padding: 0;
+  min-height: 100%;
+
+  li {
+    height: 60px;
+    margin-bottom: 20px;
+    display: block;
+    transition: all 0.5s;
+    padding: 5px;
+    text-align: center;
+
+    &:hover {
+      border-left: 4px solid $brick;
+      transition: all 0.5s;
+    }
+
+    img,svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    svg {
+      margin-top: 9px;
+    }
+  }
+}
+
+@include mq(small) {
+  .hide {
+    transform: translateX(-100%);
+    transition: transform $trns-duration;
+    position: absolute;
+  }
+}
+
+.show {
+  transform: translateX(0);
+  transition: transform $trns-duration;
+}

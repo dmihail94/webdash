@@ -1,0 +1,59 @@
+//Font Stacks
+
+$font-family--primary: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family--secondary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+//Font Weights
+
+$font-weight--light: 300;
+$font-weight--medium: 400;
+$font-weight--bold: 700;
+$font-weight--ultra-bold: 800;
+
+//Base Colors
+
+$white: rgb(243,243,243);
+$black: #0b0b0b;
+$grey: #797e83;
+
+$spring-green: rgba(#64cd83, 0.94);
+$steel-blue: steelblue;
+$dark-blue: rgb(32, 53, 57);
+$brick:rgb(149, 56, 56);
+$tomato: #EB4D4D;
+$red:rgba(241, 40, 40, 0.96);
+
+
+
+//Color Palette Mod
+
+$palettes: (
+  grey:(
+    xx-light: lighten($grey, 43%),
+    x-light: lighten($grey, 35%),
+    light: lighten($grey, 5%),
+    base: $grey,
+    dark: darken($grey,8%),
+    x-dark: darken($grey, 16%)
+  ),
+  black: (
+    light:lighten($black, 20%),
+    base: $black,
+    dark:darken($black, 10%)
+  )
+
+);
+
+// Text
+
+$base__font-size : 16px;
+$base__line      : 24px;
+$letter-space    : 1px;
+
+$trns-duration: 0.5s;
+
+//Breakpoints
+
+$break-sm: 1px;
+$break-md: 769px;
+$break-lg: 1100px;

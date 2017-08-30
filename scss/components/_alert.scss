@@ -1,0 +1,26 @@
+.alert {
+  background: $steel-blue;
+  font-size: em(16px);
+  color: $white;
+  padding: 10px 5px;
+  width: 90%;
+  margin: 10px auto;
+  border-radius: 5px;
+  @include flexy($just:space-between);
+
+  span:first-child {
+    margin-right: 10px;
+    font-size: em(18px);
+    font-weight: $font-weight--bold;
+  }
+}
+
+.alert-close {
+  background: none;
+  border: none;
+  color: $white;
+  margin-left: auto;
+  font-size: em(22px);
+  font-weight: $font-weight--bold;
+  cursor: pointer;
+}

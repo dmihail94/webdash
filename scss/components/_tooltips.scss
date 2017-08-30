@@ -1,0 +1,33 @@
+.tool {
+  cursor: pointer;
+  position: relative;
+}
+
+.tool::after {
+  position: absolute;
+  left: 50%;
+  display: none;
+  z-index: 100;
+}
+
+.tool:hover::after,
+.tool:focus::after {
+  opacity: 0.8;
+  display: block;
+  z-index: 100;
+  transform: scale(1) translateY(0);
+}
+
+.tool::after {
+  background: palette(grey,x-dark);
+  border-radius: em(5px);
+  top: 5%;
+  color:$white;
+  width: 5.5em;
+  padding: em(18px);
+  margin-left: em(42px);
+  content: attr(data-tip);
+  transform: scale(.6) translateY(40%);
+  transition: all .2s cubic-bezier(.84, -.18, .31, 1.26) .2s;
+
+}

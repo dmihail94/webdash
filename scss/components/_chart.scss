@@ -1,0 +1,54 @@
+.chart-time {
+  margin: 10px auto;
+  width: 90%;
+  @include flexy($dir:column,$just:center);
+  @include mq(medium) {
+    flex-direction: row;
+  }
+
+  .times {
+    width: 40%;
+    margin: 20px auto;
+    padding: 5px 0;
+    @include flexy($dir:column,$just:center);
+    @include mq(medium) {
+      flex-direction: row;
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    li {
+      width: 100%;
+      font-size: em(20px);
+      margin-bottom: 5px;
+      text-align: center;
+      cursor: pointer;
+      font-weight: $font-weight--bold;
+    }
+  }
+}
+
+.chart-container {
+  height: 320px;
+  min-width: 100px;
+  margin: 10px auto;
+
+}
+
+.active-time {
+  background: $spring-green;
+  border-radius: 15px;
+  color: $white;
+}
+
+.wrapp-charts {
+  width: 90%;
+  padding: 10px 0;
+  border-top: 1px solid palette(grey,x-light);
+  border-bottom: 1px solid palette(grey,x-light);
+  @include flexy($dir:column,$wrap:wrap);
+  @include mq(medium) {
+    flex-direction: row;
+  }
+
+}

@@ -1,0 +1,8 @@
+header {
+  @include flexy($just:center);
+  background: $dark-blue;
+  padding: em(16px);
+  align-items: center;
+  position: relative;
+  width: 100%;
+}

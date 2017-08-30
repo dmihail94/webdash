@@ -1,0 +1,66 @@
+.bell-wrapp {
+    position: relative;
+  &::before {
+    content: "\2022";
+    font-size: 47px;
+    position: absolute;
+    color: $tomato;
+    top: -28px;
+    right: 1px;
+}
+
+  @include mq(medium) {
+    order: 2;
+  }
+}
+
+.notification {
+  display: none;
+  color: $white;
+  width: 100%;
+  z-index: 100;
+  position: fixed;
+  top:0;
+  left: 0;
+  padding: 40px 0;
+  height: 100vh;
+
+  li {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    font-size: em(24px);
+    @include flexy();
+    @include mq(medium) {
+      margin-left: 160px;
+      font-size: em(30px);
+    }
+
+    .remove {
+      color: $red;
+      cursor: pointer;
+      margin-right: 20px;
+      margin-left: auto;
+
+      @include mq(medium) {
+        margin-right: 200px;
+      }
+    }
+
+    span {
+      color: $steel-blue;
+      font-weight: $font-weight--ultra-bold;
+    }
+
+  }
+  .close {
+    position: absolute;
+    top: 10px;
+    left:10px;
+    font-size: em(28px);
+    color:$red;
+    font-weight: $font-weight--ultra-bold;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,35 @@
+.hamburger {
+  @extend %btn;
+  background: none;
+  margin-left: -30px;
+  margin-top: -4px;
+  cursor: pointer;
+
+  @include mq(medium) {
+    display: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.submit {
+  background: none;
+  font-size: em(34px);
+  position: absolute;
+  color: $steel-blue;
+  border: none;
+  top: 7px;
+  right: 15px;
+  cursor: pointer;
+  
+  @include mq(medium) {
+    right: 20px;
+    top: 14px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

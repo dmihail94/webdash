@@ -1,0 +1,26 @@
+.icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+
+  @include e(profile) {
+    margin-left: 10px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    cursor: auto;
+
+    @include mq(medium) {
+      order: 3;
+    }
+  }
+
+  @include e(bell) {
+    margin-left: -10px;
+    transition: transform $trns-duration;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+}
