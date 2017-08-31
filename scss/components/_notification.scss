@@ -16,10 +16,11 @@
 
 .notification {
   display: none;
+  background: rgba(2,2,2,0.75);
   color: $white;
   width: 100%;
-  z-index: 100;
   position: fixed;
+  z-index: 9999;
   top:0;
   left: 0;
   padding: 40px 0;

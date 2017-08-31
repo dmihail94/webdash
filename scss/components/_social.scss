@@ -1,0 +1,54 @@
+.wrap-socials {
+	@include flexy($dir:column);
+	@include mq(medium) {
+		flex-direction: row;
+		justify-content:space-between;
+	}
+}
+
+.twitter,
+.facebook,
+.google {
+	@extend %socials;
+	margin-bottom:10px;
+	@include mq(medium) {
+		width:30%;
+	}
+	svg {
+		width:60px;
+		height:60px;
+	}
+	h3 {
+		position: absolute;
+		top:5%;
+		left:40%;
+		font-size:em(22px);
+		font-weight:$font-weight--bold;
+	}
+
+	p {
+		position:absolute;
+		top:30%;
+		left:40%;
+		font-size:em(42px);
+	}
+}
+
+
+.twitter {
+	svg {
+		fill:#2D9DD1;
+	}
+}
+
+.facebook {
+	svg {
+		fill:#004ECC;
+	}
+}
+
+.google {
+	svg {
+		fill:$red;
+	}
+}

@@ -16,8 +16,8 @@
 h1.logo {
   font-weight: 700;
   font-size: 2em;
-  line-height: 1.27778;
-  margin-bottom: 1.66667em;
+  line-height: 1.2777777778;
+  margin-bottom: 1.6666666667em;
   margin-top: 0;
   margin-left: 30px;
   text-align: center; }
@@ -27,6 +27,15 @@ main .header h2, h2.name-profile, h2.title-chart {
   font-weight: 300;
   font-size: 1.125em;
   letter-spacing: 1px; }
+
+.twitter,
+.facebook,
+.google {
+  border: 1px solid #868b8f;
+  background: #ebecec;
+  border-radius: 5px;
+  padding: 10px;
+  position: relative; }
 
 .active {
   border-left: 4px solid #953838; }
@@ -84,14 +93,16 @@ table {
   border-spacing: 0; }
 
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  height: 100%; }
 
 *::after, *::before {
   -webkit-box-sizing: inherit;
   box-sizing: inherit; }
 
 body {
-  font: 400 12.30769px "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 100%;
+  font: 400 12.3076923077px "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: #f3f3f3;
   display: flex;
   flex-wrap: wrap;
@@ -114,13 +125,12 @@ header {
   width: 100%; }
 
 main {
-  max-width: calc(100% - 180px);
+  width: calc(100% - 20px);
   padding: 0 10px;
-  width: 90%;
   transition: all 0.5s; }
   @media (min-width: 770px) {
     main {
-      width: 100%; } }
+      width: 80%; } }
   main .header {
     width: 100%;
     display: flex;
@@ -134,13 +144,6 @@ main {
       font-size: 1.875em;
       text-align: center;
       margin: 20px auto; }
-
-@media (min-width: 1px) and (max-width: 769px) {
-  .main-show {
-    max-width: 100%;
-    width: 100%;
-    transform: translateX(0);
-    transition: all 0.5s; } }
 
 h1.logo {
   color: #f3f3f3;
@@ -213,11 +216,14 @@ h2.title-chart {
     .icon-bell:hover {
       transform: scale(1.2); }
 
+nav {
+  height: 100%; }
+
 .nav {
   background: #203539;
   width: 60px;
   padding: 0;
-  min-height: 100%; }
+  height: 100%; }
   .nav li {
     height: 60px;
     margin-bottom: 20px;
@@ -234,14 +240,16 @@ h2.title-chart {
     .nav li svg {
       margin-top: 9px; }
 
+.hide, .show {
+  position: absolute;
+  z-index: 1000;
+  transition: transform 0.5s; }
+
 @media (min-width: 1px) and (max-width: 769px) {
   .hide {
-    transform: translateX(-100%);
-    transition: transform 0.5s;
-    position: absolute; } }
+    transform: translateX(-100%); } }
 .show {
-  transform: translateX(0);
-  transition: transform 0.5s; }
+  transform: translateX(0); }
 
 .tool {
   cursor: pointer;
@@ -287,10 +295,11 @@ h2.title-chart {
 
 .notification {
   display: none;
+  background: rgba(2, 2, 2, 0.75);
   color: #f3f3f3;
   width: 100%;
-  z-index: 100;
   position: fixed;
+  z-index: 9999;
   top: 0;
   left: 0;
   padding: 40px 0;
@@ -325,25 +334,6 @@ h2.title-chart {
     color: rgba(241, 40, 40, 0.96);
     font-weight: 800;
     cursor: pointer; }
-
-.glass {
-  background: inherit;
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  overflow: hidden;
-  display: none; }
-  .glass:before {
-    content: " ";
-    background: rgba(2, 2, 2, 0.9);
-    position: absolute;
-    z-index: 100;
-    left: -25px;
-    right: 0;
-    top: -25px;
-    bottom: 0;
-    box-shadow: inset 0 0 0 100% rgba(255, 255, 255, 0.2);
-    filter: blur(15px); }
 
 .search {
   width: 90%;
@@ -430,25 +420,85 @@ h2.title-chart {
       font-weight: 700; }
 
 .chart-container {
-  height: 320px;
+  height: 250px;
+  max-width: 80%;
   min-width: 100px;
-  margin: 10px auto; }
+  margin: 5px auto; }
+  @media (min-width: 1px) and (max-width: 769px) {
+    .chart-container {
+      max-width: 250px; } }
 
 .active-time {
   background: rgba(100, 205, 131, 0.94);
   border-radius: 15px;
   color: #f3f3f3; }
 
-.wrapp-charts {
-  width: 90%;
-  padding: 10px 0;
-  border-top: 1px solid #d6d7d9;
-  border-bottom: 1px solid #d6d7d9;
+.chartgroup {
+  margin: 20px auto;
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
   flex-direction: column; }
   @media (min-width: 770px) {
-    .wrapp-charts {
-      flex-direction: row; } }
+    .chartgroup {
+      flex-direction: row;
+      border: 1px solid #868b8f;
+      border-radius: 5px; } }
+
+@media (min-width: 770px) {
+  .mobilechart {
+    border-left: 1px solid #868b8f;
+    padding: 10px 0 10px 20%; } }
+
+.dailychart,
+.mobilechart {
+  max-width: 250px; }
+
+.wrap-socials {
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 770px) {
+    .wrap-socials {
+      flex-direction: row;
+      justify-content: space-between; } }
+
+.twitter,
+.facebook,
+.google {
+  margin-bottom: 10px; }
+  @media (min-width: 770px) {
+    .twitter,
+    .facebook,
+    .google {
+      width: 30%; } }
+  .twitter svg,
+  .facebook svg,
+  .google svg {
+    width: 60px;
+    height: 60px; }
+  .twitter h3,
+  .facebook h3,
+  .google h3 {
+    position: absolute;
+    top: 5%;
+    left: 40%;
+    font-size: 1.375em;
+    font-weight: 700; }
+  .twitter p,
+  .facebook p,
+  .google p {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    font-size: 2.625em; }
+
+.twitter svg {
+  fill: #2D9DD1; }
+
+.facebook svg {
+  fill: #004ECC; }
+
+.google svg {
+  fill: rgba(241, 40, 40, 0.96); }
 
 /*# sourceMappingURL=style.css.map */

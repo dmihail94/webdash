@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-
+	height:100%;
 }
 
 *::after,*::before {
@@ -9,6 +9,7 @@ html {
 }
 
 body {
+	height:100%;
 font: $font-weight--medium $base__font-size/1.3 $font-family--primary;
 background: $white;
 @include flexy($wrap:wrap,$just:space-between);

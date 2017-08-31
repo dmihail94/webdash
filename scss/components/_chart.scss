@@ -1,54 +1,69 @@
 .chart-time {
-  margin: 10px auto;
-  width: 90%;
-  @include flexy($dir:column,$just:center);
-  @include mq(medium) {
-    flex-direction: row;
-  }
-
-  .times {
-    width: 40%;
-    margin: 20px auto;
-    padding: 5px 0;
-    @include flexy($dir:column,$just:center);
+    margin: 10px auto;
+    width: 90%;
+    @include flexy($dir: column, $just:center);
     @include mq(medium) {
-      flex-direction: row;
-      margin-left: auto;
-      margin-right: 0;
+        flex-direction: row;
     }
 
-    li {
-      width: 100%;
-      font-size: em(20px);
-      margin-bottom: 5px;
-      text-align: center;
-      cursor: pointer;
-      font-weight: $font-weight--bold;
+    .times {
+        width: 40%;
+        margin: 20px auto;
+        padding: 5px 0;
+        @include flexy($dir: column, $just:center);
+        @include mq(medium) {
+            flex-direction: row;
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        li {
+            width: 100%;
+            font-size: em(20px);
+            margin-bottom: 5px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: $font-weight--bold;
+        }
     }
-  }
 }
 
 .chart-container {
-  height: 320px;
-  min-width: 100px;
-  margin: 10px auto;
+    height: 250px;
+    max-width: 80%;
+    min-width: 100px;
+    margin: 5px auto;
 
+    @include mq(small) {
+        max-width: 250px;
+    }
 }
 
 .active-time {
-  background: $spring-green;
-  border-radius: 15px;
-  color: $white;
+    background: $spring-green;
+    border-radius: 15px;
+    color: $white;
 }
 
-.wrapp-charts {
-  width: 90%;
-  padding: 10px 0;
-  border-top: 1px solid palette(grey,x-light);
-  border-bottom: 1px solid palette(grey,x-light);
-  @include flexy($dir:column,$wrap:wrap);
-  @include mq(medium) {
-    flex-direction: row;
-  }
+.chartgroup {
+  margin: 20px auto;
+    width: 100%;
+    @include flexy($dir: column, $just:center);
+    @include mq(medium) {
+        flex-direction: row;
+        border: 1px solid palette(grey, light);
+        border-radius: 5px;
+    }
+}
 
+.mobilechart {
+    @include mq(medium) {
+        border-left: 1px solid palette(grey, light);
+        padding: 10px 0 10px 20%;
+    }
+}
+
+.dailychart,
+.mobilechart {
+    max-width: 250px;
 }
