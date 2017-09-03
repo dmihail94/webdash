@@ -59,7 +59,7 @@ $.getJSON("js/users.json",function(data) {
   $.each(data,function(key,val) {
       result+= '<li>';
       result+= '<h3>' + val.name + '</h3>';
-      result+= '<a href="mailto:"' + val.email + '>' + val.email + '</a>';
+      result+= '<a href="mailto:' + val.email + '">' + val.email + '</a>';
       result+='</li>';
   });
   result+='</ul>';
