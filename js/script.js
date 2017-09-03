@@ -52,3 +52,15 @@ $('.times li').click(function(event) {
         $('#chart1m').css('display', 'block');
     }
 });
+
+//get members from json file
+var result = '<ul>';
+$.getJSON("js/users.json",function(data) {
+  $.each(data,function(user) {
+      result+= '<li>';
+      result+= user.name;
+      result+='</li>';
+  });
+});
+result+='</ul>';
+$('.recent-members').append(result);

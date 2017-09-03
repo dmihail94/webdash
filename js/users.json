@@ -1,0 +1,25 @@
+[{
+    "name": "Victoria Chambers",
+    "email": "victoria.chambers80@example.com",
+    "photo": "https://randomuser.me/api/portraits/women/31.jpg",
+    "registered": "10/15/15"
+  },
+  {
+    "name": "Dale Byrd",
+    "email": "dalebyrd90@example.com",
+    "photo": "https://randomuser.me/api/portraits/men/9.jpg",
+    "registered": "10/15/15"
+  },
+  {
+    "name": "Dawn Wood",
+    "email": "dawn.wood24@example.com",
+    "photo": "https://randomuser.me/api/portraits/women/11.jpg",
+    "registered": "10/15/15"
+  },
+  {
+    "name": "Dan Oliver",
+    "email": "dannoliver@example.com",
+    "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+    "registered": "10/15/15"
+  }
+]
