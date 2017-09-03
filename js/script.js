@@ -54,12 +54,12 @@ $('.times li').click(function(event) {
 });
 
 //get members from json file
-
 $.getJSON("js/users.json",function(data) {
   var result = '<ul>';
   $.each(data,function(key,val) {
       result+= '<li>';
-      result+= val.name;
+      result+= '<h3>' + val.name + '</h3>';
+      result+= '<a href="mailto:"' + val.email + '>' + val.email + '</a>';
       result+='</li>';
   });
   result+='</ul>';
