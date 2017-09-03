@@ -2,24 +2,28 @@
     "name": "Victoria Chambers",
     "email": "victoria.chambers80@example.com",
     "photo": "https://randomuser.me/api/portraits/women/31.jpg",
-    "registered": "10/15/15"
+    "registered": "10/15/15",
+    "activity": [["Commented on your Facebook post",4]]
   },
   {
     "name": "Dale Byrd",
     "email": "dalebyrd90@example.com",
     "photo": "https://randomuser.me/api/portraits/men/9.jpg",
-    "registered": "10/15/15"
+    "registered": "10/15/15",
+    "activity": [["Commented on your Facebook post",5]]
   },
   {
     "name": "Dawn Wood",
     "email": "dawn.wood24@example.com",
     "photo": "https://randomuser.me/api/portraits/women/11.jpg",
-    "registered": "10/15/15"
+    "registered": "10/15/15",
+    "activity": [["Commented on your Facebook post",1]]
   },
   {
     "name": "Dan Oliver",
     "email": "dannoliver@example.com",
     "photo": "https://randomuser.me/api/portraits/men/81.jpg",
-    "registered": "10/15/15"
+    "registered": "10/15/15",
+    "activity": [["Commented on your Facebook post",24]]
   }
 ]

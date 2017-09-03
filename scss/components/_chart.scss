@@ -51,14 +51,14 @@
     @include flexy($dir: column, $just:center);
     @include mq(medium) {
         flex-direction: row;
-        border: 1px solid palette(grey, light);
+        border: 1px solid palette(grey, x-light);
         border-radius: 5px;
     }
 }
 
 .mobilechart {
     @include mq(medium) {
-        border-left: 1px solid palette(grey, light);
+        border-left: 1px solid palette(grey, x-light);
         padding: 10px 0 10px 20%;
     }
 }
