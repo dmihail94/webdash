@@ -54,13 +54,14 @@ $('.times li').click(function(event) {
 });
 
 //get members from json file
-var result = '<ul>';
+
 $.getJSON("js/users.json",function(data) {
-  $.each(data,function(user) {
+  var result = '<ul>';
+  $.each(data,function(key,val) {
       result+= '<li>';
-      result+= user.name;
+      result+= val.name;
       result+='</li>';
   });
+  result+='</ul>';
+  $('.recent-members').append(result);
 });
-result+='</ul>';
-$('.recent-members').append(result);
