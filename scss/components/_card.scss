@@ -1,0 +1,73 @@
+.card {
+    @extend %card;
+}
+
+.message,
+.settings {
+    width: 100%;
+    padding: 10px 0;
+    @include mq(medium) {
+        width: 45%;
+    }
+}
+
+.message {
+    text-align: center;
+    margin-right: 10%;
+
+    input,
+    textarea {
+        width: 90%;
+        border: none;
+        background: palette(grey, xx-light);
+        border-radius: 5px;
+        padding: 5px 5px;
+        font-size: em(22px);
+        color: palette(black, light);
+        letter-spacing: 1.5px;
+        margin: 10px auto;
+    }
+
+    input {
+        height: 30px;
+        font-weight: $font-weight--light;
+    }
+
+    textarea {
+        height: 200px;
+        resize: none;
+    }
+
+    .form-submit {
+    background: $steel-blue;
+    color: $white;
+}
+}
+
+.settings {
+    @include flexy($dir:column);
+
+    .input {
+        width:100%;
+        margin:10px 0 10px 5px;
+
+        label {
+            font-size: em(22px);
+            font-weight: $font-weight--bold;
+        }
+
+        
+    }
+    @include mq(small) {
+        border-top:1px solid palette(grey,xx-light);
+    }
+
+    select {
+        width: 90%;
+        height: 40px;
+        background: palette(grey, xx-light);
+        margin: 30px auto;
+        border: none;
+        border-radius: 5px;
+    }
+}

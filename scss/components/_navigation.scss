@@ -1,42 +1,43 @@
-
 .nav {
-  background: $dark-blue;
-  width: 60px;
-  height: 100%;
-  padding: 0;
-  position: fixed;
-  left:0;
-  top:60px;
+    background: $dark-blue;
+    width: 60px;
+    height: 100%;
+    padding: 0;
+    position: fixed;
+    left: 0;
+    top: 60px;
 
-  li {
-    height: 60px;
-    margin-bottom: 20px;
-    display: block;
-    transition: all 0.5s;
-    padding: 5px;
-    text-align: center;
+    li {
+        height: 60px;
+        margin-bottom: 20px;
+        display: block;
+        transition: all 0.5s;
+        padding: 5px;
+        text-align: center;
 
-    &:hover {
-      border-left: 4px solid $brick;
-      transition: all 0.5s;
+        &:hover {
+            border-left: 4px solid $brick;
+            transition: all 0.5s;
+        }
+
+        img,
+        svg {
+            width: 30px;
+            height: 30px;
+        }
+
+        svg {
+            margin-top: 9px;
+        }
     }
-
-    img,svg {
-      width: 30px;
-      height: 30px;
-    }
-
-    svg {
-      margin-top: 9px;
-    }
-  }
 }
 
-.hide,.show {
+.hide,
+.show {
     position: fixed;
-    top:71px;
+    top: 62px;
     @include mq(medium) {
-      top:39px;
+        top: 39px;
     }
     left:0;
     z-index: 100;
@@ -44,11 +45,11 @@
 }
 
 @include mq(small) {
-  .hide {
-    transform: translateX(-100%);
-  }
+    .hide {
+        transform: translateX(-100%);
+    }
 }
 
 .show {
-  transform: translateX(0);
+    transform: translateX(0);
 }

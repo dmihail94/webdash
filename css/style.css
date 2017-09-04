@@ -3,7 +3,6 @@
   border: none;
   border-radius: 0.3125em;
   color: #f3f3f3;
-  font-size: 2.375em;
   text-transform: capitalize;
   font-weight: 400;
   transition: opacity 0.5s;
@@ -22,8 +21,7 @@ h1.logo {
   margin-left: 30px;
   text-align: center; }
 
-main .header h2, h2.name-profile, h2.title-chart, .activity h2,
-.recent-members h2 {
+.members h2, .card h2, main .header h2, h2.name-profile, h2.title-chart {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 1.125em;
@@ -32,10 +30,32 @@ main .header h2, h2.name-profile, h2.title-chart, .activity h2,
 .twitter,
 .facebook,
 .google {
+  background: white;
   border: 1px solid #ebecec;
-  border-radius: 5px;
-  padding: 10px;
+  border-radius: 8px;
+  padding: 20px 10px;
   position: relative; }
+
+.members, .card {
+  padding: 15px 0;
+  margin-top: 10px;
+  border: 2px solid #ebecec;
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 770px) {
+    .members, .card {
+      flex-direction: row; } }
+  .members h2, .card h2 {
+    font-size: 1.5em; }
+    @media (min-width: 770px) {
+      .members h2, .card h2 {
+        margin: 20px 20px 10px; } }
+    @media (min-width: 1px) and (max-width: 769px) {
+      .members h2, .card h2 {
+        text-align: center; } }
 
 .active {
   border-left: 4px solid #953838; }
@@ -178,7 +198,8 @@ h2.title-chart {
 
 .hamburger {
   background: none;
-  margin-left: -30px;
+  font-size: 2em;
+  margin-left: -20px;
   margin-top: -4px;
   cursor: pointer; }
   @media (min-width: 770px) {
@@ -216,7 +237,7 @@ h2.title-chart {
       .icon-profile {
         order: 3; } }
   .icon-bell {
-    margin-left: -5px;
+    margin-left: -15px;
     margin-top: 2px;
     transition: transform 0.5s; }
     .icon-bell:hover {
@@ -240,20 +261,23 @@ h2.title-chart {
     .nav li:hover {
       border-left: 4px solid #953838;
       transition: all 0.5s; }
-    .nav li img, .nav li svg {
+    .nav li img,
+    .nav li svg {
       width: 30px;
       height: 30px; }
     .nav li svg {
       margin-top: 9px; }
 
-.hide, .show {
+.hide,
+.show {
   position: fixed;
-  top: 71px;
+  top: 62px;
   left: 0;
   z-index: 100;
   transition: transform 0.5s; }
   @media (min-width: 770px) {
-    .hide, .show {
+    .hide,
+    .show {
       top: 39px; } }
 
 @media (min-width: 1px) and (max-width: 769px) {
@@ -429,13 +453,17 @@ h2.title-chart {
       font-weight: 700; }
 
 .chart-container {
+  background: white;
+  border-radius: 8px;
   height: 250px;
   max-width: 80%;
   min-width: 100px;
-  margin: 5px auto; }
+  margin: 5px auto;
+  padding: 20px 0; }
   @media (min-width: 1px) and (max-width: 769px) {
     .chart-container {
-      max-width: 250px; } }
+      max-width: 250px;
+      padding: 20px; } }
 
 .active-time {
   background: rgba(100, 205, 131, 0.94);
@@ -443,26 +471,38 @@ h2.title-chart {
   color: #f3f3f3; }
 
 .chartgroup {
-  margin: 20px auto;
   background: white;
+  margin: 20px auto;
   width: 100%;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   flex-direction: column; }
   @media (min-width: 770px) {
     .chartgroup {
       flex-direction: row;
-      border: 1px solid #ebecec;
-      border-radius: 5px; } }
+      border: 1px solid #ebecec; } }
 
 @media (min-width: 770px) {
   .mobilechart {
-    border-left: 1px solid #d6d7d9;
-    padding: 10px 0 10px 20%; } }
+    border-left: 1px solid #ebecec;
+    padding: 10px 0 10px 20%;
+    margin-left: auto; } }
+@media (min-width: 1px) and (max-width: 769px) {
+  .mobilechart {
+    border-top: 1px solid #ebecec; } }
 
 .dailychart,
 .mobilechart {
-  max-width: 250px; }
+  max-width: 250px;
+  padding: 10px 0;
+  margin-left: auto;
+  margin-right: auto; }
+  @media (min-width: 1px) and (max-width: 769px) {
+    .dailychart,
+    .mobilechart {
+      max-width: 100%;
+      width: 90%; } }
 
 .wrap-socials {
   display: flex;
@@ -475,7 +515,6 @@ h2.title-chart {
 .twitter,
 .facebook,
 .google {
-  background: white;
   margin-bottom: 10px; }
   @media (min-width: 770px) {
     .twitter,
@@ -512,48 +551,29 @@ h2.title-chart {
 .google svg {
   fill: rgba(241, 40, 40, 0.96); }
 
-.members {
-  border: 2px solid #ebecec;
-  width: 100%;
-  background: white;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column; }
-  @media (min-width: 770px) {
-    .members {
-      flex-direction: row; } }
-  .members img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 10px auto; }
-    @media (min-width: 1100px) {
-      .members img {
-        margin-left: 0;
-        margin-right: 0; } }
+.members img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px auto; }
+  @media (min-width: 1100px) {
+    .members img {
+      margin-left: 0;
+      margin-right: 0; } }
 
 .recent-members {
   margin-right: 10%; }
+  @media (min-width: 1px) and (max-width: 769px) {
+    .recent-members {
+      border-bottom: 2px solid #ebecec; } }
 
 .activity,
 .recent-members {
-  border-bottom: 2px solid #ebecec;
   width: 100%; }
   @media (min-width: 770px) {
     .activity,
     .recent-members {
       width: 45%; } }
-  .activity h2,
-  .recent-members h2 {
-    font-size: 1.5em; }
-    @media (min-width: 770px) {
-      .activity h2,
-      .recent-members h2 {
-        margin: 20px 20px 10px; } }
-    @media (min-width: 1px) and (max-width: 769px) {
-      .activity h2,
-      .recent-members h2 {
-        text-align: center; } }
   .activity li,
   .recent-members li {
     display: flex;
@@ -586,6 +606,19 @@ h2.title-chart {
 
 .activity {
   margin-left: auto; }
+  .activity li {
+    transition: 0.5s; }
+    .activity li:hover {
+      background: #ebecec;
+      border-radius: 8px;
+      padding: 0 10px; }
+      .activity li:hover i {
+        font-size: 3.125em;
+        transition: all 0.5s;
+        cursor: pointer; }
+        @media (min-width: 770px) {
+          .activity li:hover i {
+            margin-top: 15px; } }
   .activity p {
     font-size: 1.125em;
     margin-top: 10px;
@@ -598,5 +631,58 @@ h2.title-chart {
   .activity i {
     font-size: 2.125em;
     color: steelblue; }
+
+.message,
+.settings {
+  width: 100%;
+  padding: 10px 0; }
+  @media (min-width: 770px) {
+    .message,
+    .settings {
+      width: 45%; } }
+
+.message {
+  text-align: center;
+  margin-right: 10%; }
+  .message input,
+  .message textarea {
+    width: 90%;
+    border: none;
+    background: #ebecec;
+    border-radius: 5px;
+    padding: 5px 5px;
+    font-size: 1.375em;
+    color: #3e3e3e;
+    letter-spacing: 1.5px;
+    margin: 10px auto; }
+  .message input {
+    height: 30px;
+    font-weight: 300; }
+  .message textarea {
+    height: 200px;
+    resize: none; }
+  .message .form-submit {
+    background: steelblue;
+    color: #f3f3f3; }
+
+.settings {
+  display: flex;
+  flex-direction: column; }
+  .settings .input {
+    width: 100%;
+    margin: 10px 0 10px 5px; }
+    .settings .input label {
+      font-size: 1.375em;
+      font-weight: 700; }
+  @media (min-width: 1px) and (max-width: 769px) {
+    .settings {
+      border-top: 1px solid #ebecec; } }
+  .settings select {
+    width: 90%;
+    height: 40px;
+    background: #ebecec;
+    margin: 30px auto;
+    border: none;
+    border-radius: 5px; }
 
 /*# sourceMappingURL=style.css.map */

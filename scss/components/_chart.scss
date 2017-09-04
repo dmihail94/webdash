@@ -29,13 +29,17 @@
 }
 
 .chart-container {
+    background: white;
+    border-radius: $border-radius;
     height: 250px;
     max-width: 80%;
     min-width: 100px;
     margin: 5px auto;
+    padding: 20px 0;
 
     @include mq(small) {
         max-width: 250px;
+        padding: 20px;
     }
 }
 
@@ -46,25 +50,36 @@
 }
 
 .chartgroup {
-    margin: 20px auto;
     background: white;
+    margin: 20px auto;
     width: 100%;
+    border-radius: $border-radius;
     @include flexy($dir: column, $just:center);
     @include mq(medium) {
         flex-direction: row;
         border: 1px solid palette(grey, xx-light);
-        border-radius: 5px;
     }
 }
 
 .mobilechart {
     @include mq(medium) {
-        border-left: 1px solid palette(grey, x-light);
+        border-left: 1px solid palette(grey, xx-light);
         padding: 10px 0 10px 20%;
+        margin-left: auto;
+    }
+    @include mq(small) {
+        border-top: 1px solid palette(grey, xx-light);
     }
 }
 
 .dailychart,
 .mobilechart {
     max-width: 250px;
+    padding: 10px 0;
+    margin-left: auto;
+    margin-right: auto;
+    @include mq(small) {
+        max-width: 100%;
+        width: 90%;
+    }
 }

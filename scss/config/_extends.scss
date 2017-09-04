@@ -3,7 +3,6 @@
   border: none;
   border-radius: em(5px);
   color: $white;
-  font-size: em(38px);
   text-transform: capitalize;
   font-weight: $font-weight--medium;
   transition: opacity $trns-duration;
@@ -38,8 +37,35 @@
 }
 
 %socials {
+  background: white;
   border:1px solid palette(grey,xx-light);
-  border-radius: 5px;
-  padding:10px;
+  border-radius: $border-radius;
+  padding:20px 10px;
   position: relative;
+}
+
+//Card
+
+%card {
+    padding: 15px 0;
+    margin-top: 10px;
+    border: 2px solid palette(grey, xx-light);
+    width: 100%;
+    background: white;
+    border-radius: $border-radius;
+    @include flexy($dir: column);
+    @include mq(medium) {
+        flex-direction: row;
+    }
+
+    h2 {
+        @extend %headl-secondary;
+        font-size: em(24px);
+        @include mq(medium) {
+            margin: 20px 20px 10px;
+        }
+        @include mq(small) {
+            text-align: center;
+        }
+    }
 }
