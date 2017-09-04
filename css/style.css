@@ -52,7 +52,7 @@ h1.logo {
     font-size: 1.5em; }
     @media (min-width: 770px) {
       .members h2, .card h2 {
-        margin: 20px 20px 10px; } }
+        margin: 20px; } }
     @media (min-width: 1px) and (max-width: 769px) {
       .members h2, .card h2 {
         text-align: center; } }
@@ -669,11 +669,62 @@ h2.title-chart {
   display: flex;
   flex-direction: column; }
   .settings .input {
+    display: flex;
+    justify-content: baseline;
     width: 100%;
     margin: 10px 0 10px 5px; }
-    .settings .input label {
-      font-size: 1.375em;
-      font-weight: 700; }
+    .settings .input h3 {
+      font-size: 1.25em;
+      font-weight: 700;
+      margin-right: 20px;
+      margin-top: 5px; }
+    .settings .input .slide {
+      width: 60px;
+      height: 30px;
+      background: steelblue;
+      position: relative;
+      border-radius: 50px;
+      box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2); }
+      .settings .input .slide:after {
+        content: '';
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        height: 2px;
+        width: 42px;
+        background: #111;
+        border-radius: 50px;
+        box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2); }
+      .settings .input .slide label {
+        display: block;
+        width: 22px;
+        height: 22px;
+        cursor: pointer;
+        position: absolute;
+        top: 4px;
+        z-index: 1;
+        left: 4px;
+        background: #fcfff4;
+        border-radius: 50px;
+        transition: all 0.4s ease;
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%); }
+        .settings .input .slide label:after {
+          content: '';
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          top: 6px;
+          left: 6px;
+          background: #333;
+          border-radius: 50px;
+          box-shadow: inset 0px 1px 1px black, 0px 1px 0px rgba(255, 255, 255, 0.9); }
+      .settings .input .slide input[type=checkbox] {
+        visibility: hidden; }
+        .settings .input .slide input[type=checkbox]:checked + label {
+          left: 38px; }
+          .settings .input .slide input[type=checkbox]:checked + label:after {
+            background: rgba(100, 205, 131, 0.94); }
   @media (min-width: 1px) and (max-width: 769px) {
     .settings {
       border-top: 1px solid #ebecec; } }
@@ -684,5 +735,33 @@ h2.title-chart {
     margin: 30px auto;
     border: none;
     border-radius: 5px; }
+
+.wrap-buttons {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+  @media (min-width: 770px) {
+    .wrap-buttons {
+      flex-direction: row; } }
+  .wrap-buttons .save,
+  .wrap-buttons .cancel-settings {
+    width: 90%;
+    color: white;
+    border-radius: 8px;
+    font-weight: 700;
+    border: none;
+    height: 30px;
+    margin: 10px auto; }
+    @media (min-width: 770px) {
+      .wrap-buttons .save,
+      .wrap-buttons .cancel-settings {
+        width: 45%; } }
+  .wrap-buttons .cancel-settings {
+    background: #797e83; }
+    @media (min-width: 770px) {
+      .wrap-buttons .cancel-settings {
+        margin-left: auto; } }
+  .wrap-buttons .save {
+    background: steelblue; }
 
 /*# sourceMappingURL=style.css.map */
