@@ -1,6 +1,6 @@
 .icon {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   cursor: pointer;
 
   @include e(profile) {
@@ -15,7 +15,8 @@
   }
 
   @include e(bell) {
-    margin-left: -10px;
+    margin-left: -5px;
+    margin-top: 2px;
     transition: transform $trns-duration;
 
     &:hover {

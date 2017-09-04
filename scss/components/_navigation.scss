@@ -1,11 +1,12 @@
-nav {
-  height: 100%;
-}
+
 .nav {
   background: $dark-blue;
   width: 60px;
+  height: 100%;
   padding: 0;
-  height:100%;
+  position: fixed;
+  left:0;
+  top:60px;
 
   li {
     height: 60px;
@@ -32,8 +33,13 @@ nav {
 }
 
 .hide,.show {
-    position: absolute;
-    z-index: 1000;
+    position: fixed;
+    top:71px;
+    @include mq(medium) {
+      top:39px;
+    }
+    left:0;
+    z-index: 100;
     transition: transform $trns-duration;
 }
 

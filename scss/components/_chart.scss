@@ -46,12 +46,13 @@
 }
 
 .chartgroup {
-  margin: 20px auto;
+    margin: 20px auto;
+    background: white;
     width: 100%;
     @include flexy($dir: column, $just:center);
     @include mq(medium) {
         flex-direction: row;
-        border: 1px solid palette(grey, x-light);
+        border: 1px solid palette(grey, xx-light);
         border-radius: 5px;
     }
 }

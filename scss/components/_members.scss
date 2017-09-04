@@ -1,6 +1,8 @@
 .members {
-  border: 2px solid palette(grey,x-light);
+  border: 2px solid palette(grey,xx-light);
   width: 100%;
+  background: white;
+  border-radius: 5px;
   @include flexy($dir:column);
   @include mq(medium) {
     flex-direction: row;
@@ -24,7 +26,7 @@
 
 .activity,
 .recent-members {
-  border-bottom: 2px solid palette(grey,x-light);
+  border-bottom: 2px solid palette(grey,xx-light);
   width: 100%;
   @include mq(medium) {
     width: 45%;
@@ -46,7 +48,7 @@
     width: 90%;
     margin: 10px auto;
     padding-bottom: 10px;
-    border-bottom: 1px solid palette(grey,x-light);
+    border-bottom: 1px solid palette(grey,xx-light);
     text-align: center;
     @include mq(large) {
       flex-direction: row;
@@ -69,8 +71,8 @@
   }
   @include mq(large) {
      @include flexy();
-     text-align: left;
-     margin-left: -200px;
+     margin-left: -50px;
+     margin-top:10px;
   }
 }
 
@@ -80,27 +82,16 @@
   p {
     font-size: em(18px);
     margin-top: 10px;
+    width:100%;
     @include mq(large) {
       margin-right: 200px;
+      text-align:left;
+      margin-left:5px;
     }
   }
 
   i {
     font-size: em(34px);
     color: $steel-blue;
-  }
-
-  li {
-    @include mq(large) {
-      flex-direction: row;
-      justify-content: space-between;
-
-    }
-  }
-}
-
-.time-activity {
-  @include mq(large) {
-    text-align: left;
   }
 }

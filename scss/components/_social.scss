@@ -9,6 +9,7 @@
 .twitter,
 .facebook,
 .google {
+	background: white;
 	@extend %socials;
 	margin-bottom:10px;
 	@include mq(medium) {
