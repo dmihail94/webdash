@@ -1,4 +1,4 @@
-.hamburger {
+.hamburger, .close-confirm {
   padding: 15px 30px;
   border: none;
   border-radius: 0.3125em;
@@ -7,9 +7,9 @@
   font-weight: 400;
   transition: opacity 0.5s;
   display: block; }
-  .hamburger:hover {
+  .hamburger:hover, .close-confirm:hover {
     opacity: 0.75; }
-  .hamburger:active {
+  .hamburger:active, .close-confirm:active {
     opacity: initial; }
 
 h1.logo {
@@ -369,6 +369,42 @@ h2.title-chart {
     color: rgba(241, 40, 40, 0.96);
     font-weight: 800;
     cursor: pointer; }
+
+.submit-form,
+.submit-settings {
+  display: none;
+  width: 50%;
+  position: fixed;
+  top: 40%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: white;
+  z-index: 1000;
+  border-radius: 5px; }
+  .submit-form h2,
+  .submit-settings h2 {
+    width: 100%;
+    margin: 40px auto;
+    padding-bottom: 20px;
+    font-size: 2em;
+    border-bottom: 2px solid #868b8f; }
+  .submit-form p,
+  .submit-settings p {
+    width: 100%;
+    font-size: 1.5em;
+    margin: 20px auto; }
+
+.submit-settings {
+  border: 2px solid #ebecec;
+  background: #f2f2f2; }
+
+.close-confirm {
+  color: black;
+  background: none;
+  border: 2px solid #ebecec;
+  font-size: 1.75em;
+  margin: 10px; }
 
 .search {
   width: 90%;

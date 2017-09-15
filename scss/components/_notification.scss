@@ -65,3 +65,48 @@
     cursor: pointer;
   }
 }
+
+//MEssages for forms submited
+
+.submit-form,
+.submit-settings {
+  display: none;
+  width: 50%;
+  position: fixed;
+  top: 40%;
+  left: 0;
+  right:0;
+  margin: 0 auto;
+  background: white;
+  z-index: 1000;
+  border-radius: 5px;
+
+  h2 {
+    width: 100%;
+    margin: 40px auto;
+    padding-bottom: 20px;
+    font-size: em(32px);
+    border-bottom: 2px solid palette(grey,light);
+  }
+
+  p {
+    width: 100%;
+    font-size: em(24px);
+    margin: 20px auto;
+  }
+
+}
+
+.submit-settings {
+    border: 2px solid palette(grey,xx-light);
+    background: #f2f2f2;
+  }
+
+.close-confirm {
+    @extend %btn;
+    color: black;
+    background: none;
+    border: 2px solid palette(grey,xx-light);
+    font-size: em(28px);
+    margin: 10px;
+  }

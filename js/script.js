@@ -81,3 +81,40 @@ $.getJSON("js/users.json", function(data) {
   $('.recent-members').append(result);
   $('.activity').append(resultActivity);
 });
+
+//Show message when form is submited
+
+$('.message form').submit(function(e) {
+  e.preventDefault();
+  $('.submit-form').fadeIn('slow');
+
+  var nameVal = $('.name-user');
+  var messageVal = $('.message-form');
+
+  if(!nameVal.val() || !messageVal.val()) {
+    $('.submit-form').css('box-shadow','inset 0px 15px 5px 0px rgba(235,47,47,0.96)');
+    $('.submit-form h2').text('Error!').css('color','red');
+    $('.submit-form p').text('Please fill correctly all inputs!');
+  } else {
+    $('.submit-form').css('box-shadow','inset 0 0 10px green');
+    $('.submit-form h2').text('Success!').css('color','green');
+    $('.submit-form p').text('Your message was sent!');
+  }
+
+    nameVal.val('');
+    messageVal.val('');
+
+
+});
+
+//Show message when settings are changed
+
+$('.wrap-buttons .save').click(function() {
+  $('.submit-settings').fadeIn('slow');
+  $('.submit-settings p').text('The changes was saved!')
+});
+
+$('.close-confirm').click(function() {
+    $(this).parent().fadeOut('slow');
+
+  });
